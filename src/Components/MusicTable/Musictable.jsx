@@ -1,15 +1,8 @@
 import SongItem from "../SongItem/SongItem";
 
 const MusicTable = ({ songs }) => {
-  const songItem = songs.map((song) => {
-    <SongItem
-      id={song.id}
-      title={song.title}
-      artist={song.artist}
-      album={song.album}
-      genre={song.genre}
-    />;
-  });
+  //   console.log(songs);
+  const songItem = songs.map((song) => <SongItem song={song} />);
   return (
     <table>
       <thead>
@@ -18,7 +11,9 @@ const MusicTable = ({ songs }) => {
           <th>Title</th>
           <th>Artist</th>
           <th>Album</th>
-          <th>genre</th>
+          <th>Realese Data</th>
+          <th>Genre</th>
+          <th>Likes</th>
         </tr>
       </thead>
       <tbody>{songItem}</tbody>

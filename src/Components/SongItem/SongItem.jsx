@@ -1,11 +1,14 @@
-const SongItem = ({ id, title, artist, album, genre }) => {
+const SongItem = ({ song }) => {
+  console.log(song);
   return (
     <tr>
-      <td>id</td>
-      <td>title</td>
-      <td>artist</td>
-      <td>album</td>
-      <td>genre</td>
+      <td>{song.id}</td>
+      <td>{song.title}</td>
+      <td>{song.artist}</td>
+      <td>{song.album}</td>
+      <td>{song.releasedate}</td>
+      <td>{song.genre}</td>
+      <th>{song.like}</th>
     </tr>
   );
 };

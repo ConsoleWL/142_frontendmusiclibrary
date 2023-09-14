@@ -11,7 +11,7 @@ function App() {
   const fetchSongs = async () => {
     try {
       const response = await axios.get("https://localhost:7043/api/Song/");
-      console.log(response);
+      // console.log(response);
       setSongs(response.data);
     } catch (error) {
       console.warn("Error in fetch songs: ", error);
